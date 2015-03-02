@@ -1,6 +1,7 @@
 gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 sourcemaps = require 'gulp-sourcemaps'
+runSequence = require 'run-sequence'
 karma = require 'karma'
 
 gulp.task 'build', ->

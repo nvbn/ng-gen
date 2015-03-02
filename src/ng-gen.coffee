@@ -20,5 +20,8 @@ gen.factory 'gen', ($rootScope, $q) -> (fn) ->
 
     handlePromise generator.next()
 
+gen.factory 'mainGen', (gen) -> (fn) ->
+  gen(fn).then (->), (err) -> throw err
+
 gen.factory 'wait', ($timeout) -> (delay) ->
   $timeout (->), delay

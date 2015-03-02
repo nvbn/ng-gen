@@ -2,7 +2,7 @@ angular.module('app', ['ng-gen'])
 
     .constant('disabledGenres', ['comedy'])
 
-    .controller('mainCtrl', function ($scope, $http, gen, wait, disabledGenres) {
+    .controller('mainCtrl', function ($scope, $http, gen, mainGen, wait, disabledGenres) {
         var getMovies = function (genre) {
             return gen(function*() {
                 if (!genre) genre = '';
@@ -31,7 +31,7 @@ angular.module('app', ['ng-gen'])
             });
         };
 
-        gen(function*() {
+        mainGen(function*() {
             try {
                 $scope.genres = yield getGenres();
                 $scope.movies = yield getMovies();

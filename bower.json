@@ -1,6 +1,6 @@
 {
   "name": "ng-gen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Angular module for replacing callbacks with es6 generators.",
   "authors": [
     "nvbn <nvbn.rm@gmail.com>"

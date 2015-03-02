@@ -35,6 +35,14 @@
     };
   });
 
+  gen.factory('mainGen', function(gen) {
+    return function(fn) {
+      return gen(fn).then((function() {}), function(err) {
+        throw err;
+      });
+    };
+  });
+
   gen.factory('wait', function($timeout) {
     return function(delay) {
       return $timeout((function() {}), delay);
