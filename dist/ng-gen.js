@@ -3,7 +3,7 @@
 
   gen = angular.module('ng-gen', []);
 
-  gen.factory('gen', function($rootScope, $q) {
+  gen.factory('gen', function($q) {
     return function(fn) {
       return $q(function(resolve, reject) {
         var generator, handlePromise, putInGenerator;

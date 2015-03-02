@@ -1,6 +1,6 @@
 gen = angular.module 'ng-gen', []
 
-gen.factory 'gen', ($rootScope, $q) -> (fn) ->
+gen.factory 'gen', ($q) -> (fn) ->
   $q (resolve, reject) ->
     generator = fn()
 
