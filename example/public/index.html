@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ng-gen example</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.css"/>
+    <script type="text/javascript" src="components/angular/angular.js"></script>
+    <script type="text/javascript" src="components/ng-gen/dist/ng-gen.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="app"
+      ng-controller="mainCtrl">
+<div class="container">
+    <h1>ng-gen example</h1>
+    <ul class="list-group">
+        <li ng-repeat="genre in genres"
+            class="list-group-item"
+            ng-class="{active: genre === currentGenre}">
+            <a ng-click="setGenre(genre)"
+               href="#">{{genre}}</a>
+        </li>
+    </ul>
+    <p ng-repeat="movie in movies"><strong>{{movie}}</strong></p>
+</div>
+</body>
+</html>

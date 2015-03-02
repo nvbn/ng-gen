@@ -2,3 +2,5 @@ tests/build/
 .idea
 bower_components/
 node_modules/
+example/public/components
+example/node_modules
